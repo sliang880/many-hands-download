@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Many Hands — Download the app</title>
+<style>
+  :root {
+    --teal: #0F766E;
+    --teal-dark: #115E59;
+    --amber: #D97706;
+    --ink: #1C1917;
+    --muted: #6B6459;
+    --sand: #F6F4EF;
+    --line: #E7E2D8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 64px; }
+  header { display: flex; align-items: center; gap: 14px; margin-bottom: 34px; }
+  .logo {
+    width: 58px; height: 58px; border-radius: 18px;
+    background: var(--teal); display: grid; place-items: center;
+    box-shadow: 0 10px 24px rgba(15,118,110,.24);
+  }
+  .logo svg { width: 30px; height: 30px; }
+  h1 { font-size: 30px; letter-spacing: -0.8px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 14px; margin: 0; }
+  .hero {
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    color: #fff; border-radius: 26px; padding: 28px 26px;
+    margin-bottom: 22px; position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -60px; top: -80px;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: rgba(255,255,255,.08);
+  }
+  .hero h2 { font-size: 25px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.5px; }
+  .hero p { margin: 0; color: #D1E7E5; font-size: 14px; line-height: 1.55; max-width: 520px; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .badge {
+    background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.18);
+    color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .4px;
+    padding: 5px 10px; border-radius: 999px;
+  }
+  .grid { display: grid; gap: 14px; }
+  @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card {
+    background: #fff; border: 1px solid var(--line); border-radius: 22px;
+    padding: 22px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .platform { display: flex; align-items: center; gap: 10px; }
+  .platform .icon {
+    width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center;
+    background: rgba(15,118,110,.09); color: var(--teal);
+  }
+  .platform h3 { margin: 0; font-size: 17px; }
+  .platform span { display: block; color: var(--muted); font-size: 11.5px; margin-top: 1px; }
+  .meta { color: var(--muted); font-size: 12px; line-height: 1.5; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    text-decoration: none; font-weight: 700; font-size: 14px;
+    min-height: 48px; border-radius: 14px; padding: 0 18px; margin-top: auto;
+    background: var(--teal); color: #fff; transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
+  .btn.secondary { background: #fff; color: var(--teal); border: 1.5px solid var(--teal); }
+  .btn.secondary:hover { background: rgba(15,118,110,.06); }
+  .btn.disabled { background: #EAE6DD; color: #8A8578; cursor: not-allowed; }
+  .steps { margin: 26px 0 0; background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 22px; }
+  .steps h3 { margin: 0 0 12px; font-size: 15px; }
+  .steps ol { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+  .steps code {
+    background: var(--sand); border: 1px solid var(--line); border-radius: 6px;
+    padding: 1px 5px; font-size: 11.5px; color: var(--ink);
+  }
+  .note {
+    margin-top: 18px; padding: 14px 16px; border-radius: 14px;
+    background: rgba(217,119,6,.08); color: #8A6A1F; font-size: 12px; line-height: 1.55;
+  }
+  footer { margin-top: 30px; color: #8A8578; font-size: 11.5px; line-height: 1.6; text-align: center; }
+  footer a { color: var(--teal); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M12 20s-7-4.35-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.65 12 20 12 20Z" fill="#fff"/>
+        <path d="M8.5 11.5 12 14l3.5-2.5" stroke="#0F766E" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Many Hands</h1>
+      <p class="sub">Eastside Community Food Bank · CS 403 Assignment 12</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Volunteer from your pocket.</h2>
+    <p>Browse community issues, claim tasks, follow up with neighbors, and ask the AI assistant
+      what needs a hand — in a native Flutter app backed by Firebase.</p>
+    <div class="badges">
+      <span class="badge">20 members</span>
+      <span class="badge">60 issues</span>
+      <span class="badge">240 tasks</span>
+      <span class="badge">VOICE + AI SEARCH</span>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <div class="platform">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.5 16.4 7.3 8.8 11l-1.2-2.2 3.8-2.1-1.1-2L7.9 6.8 6.7 4.6l2.3-1.3-.2-.4A1.6 1.6 0 0 0 6.7 2l-2 .6c-.9.3-1.4 1.3-1.1 2.2l2.3 8.5 2.5 4.3a3.1 3.1 0 0 0 4.3 1.2l4.6-2.6c.9-.5 1.2-1.6.7-2.5l-.4-.7 1.8-1-1.2-2.2-1.8 1Z"/></svg>
+        </div>
+        <div>
+          <h3>Android</h3>
+          <span>APK · Android 7.0+</span>
+        </div>
+      </div>
+      <p class="meta">Install directly on any Android phone. If prompted, allow “Install unknown apps”
+        for your browser or file manager.</p>
+      <a class="btn" id="apk" href="many-hands.apk" download>Download APK</a>
+    </section>
+
+    <section class="card">
+      <div class="platform">
+        <div class="icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.8c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.2.8-.7 0-1.7-.8-2.8-.7-1.4 0-2.7.8-3.4 2.1-1.5 2.5-.4 6.3 1 8.3.7 1 1.5 2.1 2.6 2 1-.1 1.4-.7 2.7-.7s1.6.7 2.7.7c1.1 0 1.8-1 2.5-2 .8-1.1 1.1-2.2 1.2-2.3-.1 0-2.1-.8-2.1-3.3ZM14.5 5.9c.6-.7 1-1.7.9-2.7-.9.1-2 .6-2.6 1.3-.6.6-1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2Z"/></svg>
+        </div>
+        <div>
+          <h3>iOS</h3>
+          <span>iPhone · iOS 15+</span>
+        </div>
+      </div>
+      <p class="meta" id="ios-meta">An unsigned build is provided for sideloading with
+        Sideloadly, AltStore, or Xcode. TestFlight is used when an Apple Developer account is available.</p>
+      <a class="btn secondary" id="ipa" href="many-hands-ios-unsigned.ipa" download>Download iOS build</a>
+    </section>
+  </div>
+
+  <section class="steps">
+    <h3>Install in under a minute</h3>
+    <ol>
+      <li><strong>Android:</strong> tap “Download APK”, open the file, and confirm install.</li>
+      <li><strong>iPhone:</strong> download the build, then drag it onto Sideloadly with your Apple ID
+        (free accounts work for 7 days at a time).</li>
+      <li>Sign up with any email and password, then explore the community.</li>
+      <li>Tap the mic in search and ask: <code>What needs volunteers this week?</code></li>
+    </ol>
+    <div class="note">
+      <strong>Firebase build:</strong> signs in to the <code>cs401-edeee</code> project.
+      The community is preloaded with 20 members, 60 issues, and 240 tasks.
+    </div>
+  </section>
+
+  <footer>
+    Many Hands · Flutter + Firebase + DeepSeek · Built for CS 403 Assignment 12.<br>
+    Questions? Open the app and check <strong>Me → Firebase connection</strong>.
+  </footer>
+</div>
+</body>
+</html>
